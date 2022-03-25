@@ -249,7 +249,7 @@ class QuickBooks_HTTP
 		{
 			return $this->_body;
 		}
-		else if (is_array($this->_post))
+		else if (!is_null($this->_post))
 		{
 			return http_build_query($this->_post);
 		}
